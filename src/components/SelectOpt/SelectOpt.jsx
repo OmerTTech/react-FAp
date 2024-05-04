@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./SelectOpt.css"
 import axios, { all } from "axios"
 
-const SelectOpt = ({setCategory}) => {
+const SelectOpt = ({ setCategory }) => {
     const [item, setItem] = useState()
 
 
@@ -21,16 +21,18 @@ const SelectOpt = ({setCategory}) => {
         getProductById()
     }, [])
     return (
-        <select onChange={navigator} className="form-select" aria-label="Default select example">
-            <option className='text-secondary' value="allCategory">Bütün məhsulları göstər</option>
-            {
-                item && item.map((element, index) => {
-                    return (
-                        <option key={index} value={element}>{element}</option>
-                    )
-                })
-            }
-        </select>
+        <div className='col-11'>
+            <select onChange={navigator} className="nav-form-select form-select" aria-label="Default select example">
+                <option className='text-secondary' value="allCategory">Bütün məhsulları göstər</option>
+                {
+                    item && item.map((element, index) => {
+                        return (
+                            <option key={index} value={element}>{element}</option>
+                        )
+                    })
+                }
+            </select>
+        </div>
 
     )
 }

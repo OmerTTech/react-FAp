@@ -39,26 +39,29 @@ const ProductsMenu = () => {
                         .then(items => setProducts(items.data))
                         .catch(error => console.log(error))
                     break;
-                    default:
-                        console.log("no found");
-                        break;
+                default:
+                    console.log("no found");
+                    break;
             }
         };
-    
-        productList();
-    }, [category]);    
 
-return (
+        productList();
+    }, [category]);
+
+    return (
         <div className="container my-3">
             <div className="row d-flex g-3">
-                <SelectOpt setCategory={setCategory} />
+                <div className='d-flex justify-content-between'>
+                    <SelectOpt setCategory={setCategory} />
+                    <button className='btn btn-outline-success'>Filter</button>
+                </div>
                 {
-                products !== null && products !== undefined ? products.map(item => {
-                    return(
-                    <Card key={item.id} data={item}/>
-                    )
-                }) : <Spinner /> 
-                } 
+                    products !== null && products !== undefined ? products.map(item => {
+                        return (
+                            <Card key={item.id} data={item} />
+                        )
+                    }) : <Spinner />
+                }
             </div>
         </div>
     )
