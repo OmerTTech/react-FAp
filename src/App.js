@@ -7,6 +7,7 @@ import Details from "./pages/Details/details.jsx";
 import Category from "./pages/Categorys/Category.jsx";
 
 function App() {
+  
   return (
     <div className="App">
       <BrowserRouter>
