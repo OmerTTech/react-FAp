@@ -16,7 +16,6 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path='/products' element={<ProductsMenu />} />
           <Route path='/:id' element={<Details />} />
-          <Route path='/products/category/:id' element={<Category />} />
           <Route path='*' element={<NoFound />} />
         </Routes>
       </BrowserRouter>
