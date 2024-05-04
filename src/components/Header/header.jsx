@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Link, NavLink } from "react-router-dom";
+import SelectOpt from "../SelectOpt/SelectOpt";
 
 const header = () => {
   return (
@@ -9,6 +10,7 @@ const header = () => {
         <Link to="/">
           <img src="http://shop.az/assets/images/logos/logo.svg" alt="" />
         </Link>
+          <SelectOpt />
         <nav className="nav">
           <NavLink className="mx-3 d-flex align-items-center" to="/">Ana Səhifə</NavLink>
           <NavLink className="mx-3 d-flex align-items-center" to="/products">Məhsullar</NavLink>

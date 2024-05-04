@@ -4,6 +4,7 @@ import NoFound from "./pages/Error/noFound.jsx";
 import Homepage from "./pages/Homepage/homepage.jsx";
 import ProductsMenu from "./pages/Products/productMenu.jsx"
 import Details from "./pages/Details/details.jsx";
+import Category from "./pages/Categorys/Category.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path='/products' element={<ProductsMenu />} />
           <Route path='/:id' element={<Details />} />
+          <Route path='/products/category/:id' element={<Category />} />
           <Route path='*' element={<NoFound />} />
         </Routes>
       </BrowserRouter>

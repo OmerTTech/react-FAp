@@ -15,7 +15,8 @@ const Details = () => {
     }
 
     getProductById()
-  })
+    console.log(item);
+  },[])
   return (
 
     <div>
